@@ -37,10 +37,10 @@ do_configure_prepend(){
 }
 
 do_install_append(){
-    install -d ${D}/root/turtlebot3
-#    install -m 0644 ${WORKDIR}/package/usr/examples/uxr/client/turtlebot3_lidar/bin/turtlebot3_lidar ${D}/root/turtlebot3
-    cp ${D}/usr/examples/uxr/client/turtlebot3_lidar/bin/turtlebot3_lidar ${D}/root/turtlebot3
-    install -m 0644 ${S}/examples/tb3_sbc_settings/tb3_fastrtps_profile.refs ${D}/root/turtlebot3
+    install -d ${D}/opt/turtlebot3
+#    install -m 0644 ${WORKDIR}/package/usr/examples/uxr/client/turtlebot3_lidar/bin/turtlebot3_lidar ${D}/opt/turtlebot3
+    cp ${D}/usr/examples/uxr/client/turtlebot3_lidar/bin/turtlebot3_lidar ${D}/opt/turtlebot3
+    install -m 0644 ${S}/examples/tb3_sbc_settings/tb3_fastrtps_profile.refs ${D}/opt/turtlebot3
 }
 inherit cmake
 INSANE_SKIP_${PN} = "installed-vs-shipped"
@@ -50,6 +50,6 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 FILES_${PN} += " ${prefix}/examples/* "
 FILES_${PN}-dev += " ${prefix}/examples/* ${includedir} "
-FILES_${PN} += " /root/turtlebot3/* "
+FILES_${PN} += " /opt/turtlebot3/* "
 
 BBCLASSEXTEND = "native"
