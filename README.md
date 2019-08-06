@@ -1,8 +1,17 @@
 # meta-robot
-## Overview
+## Summary
 meta-robot provides recipes for controlling common ROS 2 reference robots. Currently the Turtlebot3 is supported.
+## Dependencies
+URI: git://github.com/ros/meta-ros.git
+branch: thud-draft
+
+URI: git://github.com/openembedded/bitbake.git
+branch: master
+
+URI: git://github.com/openembedded/meta-openembedded.git
+branch: thud
 ## License
-This project is licensed under the BSD 3-Clause License. See LICENSE-NOTICES.txt for the license text.
+This project is provided under the terms of the MIT License. See LICENSE-NOTICES.txt for the license text.
 ## Installation
 Clone this layer to your layers directory and add its path to your bblayers.conf file. The following recipes can then be appended to your image:
 opencr: provides OpenCR firmware
