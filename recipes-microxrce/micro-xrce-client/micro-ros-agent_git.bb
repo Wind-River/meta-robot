@@ -81,8 +81,8 @@ inherit ros_${ROS_BUILD_TYPE}
 EXTRA_OECMAKE += ""
 
 do_install_append(){
-    install -d ${D}/opt/turtlebot3
-    cp ${D}${base_prefix}/usr/lib/micro_ros_agent/DEFAULT_FASTRTPS_PROFILES.xml ${D}${base_prefix}/opt/turtlebot3
+    install -d ${D}/root/turtlebot3
+    cp ${D}${base_prefix}/usr/lib/micro_ros_agent/DEFAULT_FASTRTPS_PROFILES.xml ${D}${base_prefix}/root/turtlebot3
 }
 
-FILES_${PN} += " /opt/turtlebot3/DEFAULT_FASTRTPS_PROFILES.xml "
+FILES_${PN} += " /root/turtlebot3/DEFAULT_FASTRTPS_PROFILES.xml "
