@@ -63,26 +63,18 @@ S = "${WORKDIR}/git/micro_ros_agent"
 
 ROS_BUILD_TYPE = "ament_cmake"
 
-# Allow the above settings to be overridden.
-#ROS_INCLUDES_TREE := "${@ros_superflore_generated__get_includes_tree('micro-xrce-dds-agent', d)}"
-#include ${ROS_LAYERDIR}/${ROS_INCLUDES_TREE}/micro-xrce-dds-agent/micro-xrce-dds-agent_common.inc
-#include ${ROS_LAYERDIR}/${ROS_INCLUDES_TREE}/micro-xrce-dds-agent/micro-xrce-dds-agent-${PV}_common.inc
-#include ${ROS_LAYERDIR}/${ROS_INCLUDES_TREE}/micro-xrce-dds-agent/${BPN}.inc
-#include ${ROS_LAYERDIR}/${ROS_INCLUDES_TREE}/micro-xrce-dds-agent/${BPN}-${PV}.inc
+
 
 inherit ros2_component
 inherit ros_${ROS_BUILD_TYPE}
 
 
-#INHIBIT_PACKAGE_STRIP = "1"
-#INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
-
 
 EXTRA_OECMAKE += ""
 
 do_install_append(){
-    install -d ${D}/root/turtlebot3
-    cp ${D}${base_prefix}/usr/lib/micro_ros_agent/DEFAULT_FASTRTPS_PROFILES.xml ${D}${base_prefix}/root/turtlebot3
+    install -d ${D}/opt/turtlebot3
+    cp ${D}${base_prefix}/usr/lib/micro_ros_agent/DEFAULT_FASTRTPS_PROFILES.xml ${D}${base_prefix}/opt/turtlebot3
 }
 
-FILES_${PN} += " /root/turtlebot3/DEFAULT_FASTRTPS_PROFILES.xml "
+FILES_${PN} += " /opt/turtlebot3/DEFAULT_FASTRTPS_PROFILES.xml "
