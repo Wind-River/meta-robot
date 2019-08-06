@@ -1,0 +1,21 @@
+diff --git a/home/bengelma/Downloads/dnf-564c44667c7014843fa6f1732621093114ec59b2/dnf/util.py b/home/bengelma/Downloads/dnf-564c44667c7014843fa6f1732621093114ec59b2/dnf/util2.py
+index 9726339..6f8743b 100644
+--- a/dnf/util.py
++++ b/dnf/util.py
+@@ -38,6 +38,7 @@ import shutil
+ import subprocess
+ import sys
+ import tempfile
++import errno
+ import time
+ 
+ logger = logging.getLogger('dnf')
+@@ -120,7 +121,7 @@ def ensure_dir(dname):
+     try:
+         os.makedirs(dname, mode=0o755)
+     except OSError as e:
+-        if e.errno != os.errno.EEXIST or not os.path.isdir(dname):
++        if e.errno != errno.EEXIST or not os.path.isdir(dname):
+             raise e
+ 
+ def empty(iterable):

@@ -1,0 +1,14 @@
+diff --git a/home/bengelma/Downloads/Client-Diff/client.config b/home/bengelma/Downloads/Client-Diff/client1.config
+index 08ce23a..0d74ec1 100644
+--- a/client.config
++++ b/client.config
+@@ -14,6 +14,6 @@ CONFIG_MIN_HEARTBEAT_TIME_INTERVAL=1
+ 
+ CONFIG_BIG_ENDIANNESS=FALSE
+ 
+-CONFIG_UDP_TRANSPORT_MTU=512
+-CONFIG_TCP_TRANSPORT_MTU=512
+-CONFIG_SERIAL_TRANSPORT_MTU=512
++CONFIG_UDP_TRANSPORT_MTU=8192
++CONFIG_TCP_TRANSPORT_MTU=8192
++CONFIG_SERIAL_TRANSPORT_MTU=8192

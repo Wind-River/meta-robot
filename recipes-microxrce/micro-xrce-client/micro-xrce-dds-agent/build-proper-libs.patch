@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists1.txt
+index 99bdf18..aa1059d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -94,8 +94,8 @@ endif()
+ ###############################################################################
+ # Load external dependencies.
+ ###############################################################################
+-find_package(fastcdr "1.0.9" EXACT REQUIRED PATHS ${PROJECT_BINARY_DIR}/temp_install)
+-find_package(CLI11 "1.7.1" EXACT REQUIRED PATHS ${PROJECT_BINARY_DIR}/temp_install)
++eprosima_find_package(fastcdr REQUIRED)
++eprosima_find_package(CLI11 REQUIRED)
+ if(UAGENT_P2P_PROFILE)
+     find_package(microxrcedds_client "1.1.0" EXACT REQUIRED PATHS ${PROJECT_BINARY_DIR}/temp_install)
+     find_package(microcdr REQUIRED PATHS ${PROJECT_BINARY_DIR}/temp_install)

@@ -1,0 +1,17 @@
+ # Copyright (c) 2019 Wind River Systems, Inc. 
+ # Licensed under the Apache License, Version 2.0 (the "License"); 
+ # you may not use this file except in compliance with the License. 
+ # You may obtain a copy of the License at: 
+ #       http://www.apache.org/licenses/LICENSE-2.0 
+ # Unless required by applicable law or agreed to in writing, software  distributed 
+ # under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+ # OR CONDITIONS OF ANY KIND, either express or implied.
+--- a/setup.cfg	2019-06-03 12:44:39.316051149 -0400
++++ b/setup.cfg	2019-06-03 12:44:58.707970719 -0400
+@@ -1,5 +1,6 @@
+ [metadata]
+ name = importlib_metadata
++version = 0.17
+ author = Barry Warsaw
+ author_email = barry@python.org
+ url = http://importlib-metadata.readthedocs.io/

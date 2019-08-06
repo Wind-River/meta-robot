@@ -1,0 +1,14 @@
+diff --git a/home/bengelma/Downloads/patching/CMakeLists.txt b/home/bengelma/Downloads/patching/CMakeLists1.txt
+index 3195855..66e5acc 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -97,6 +97,9 @@ execute_process(
+   RESULT_VARIABLE _result
+   OUTPUT_STRIP_TRAILING_WHITESPACE
+ )
++message(STATUS "COLCON_CALL_DIR: ${_COLCON_CALL_DIR}")
++message(STATUS "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}")
++message(STATUS "_packages: ${_packages}")
+ if(NOT _result EQUAL 0)
+   message(FATAL_ERROR "Error finding xml packages")
+ endif()

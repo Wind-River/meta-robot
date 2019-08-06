@@ -1,0 +1,29 @@
+diff --git a/home/bengelma/Downloads/Client-Diff/CMakeLists.txt b/home/bengelma/Downloads/Client-Diff/CMakeLists1.txt
+index 1aa7604..488246e 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -20,9 +20,9 @@ cmake_minimum_required(VERSION 3.5.0 FATAL_ERROR)
+ ###############################################################################
+ # Build options
+ ###############################################################################
+-option(UCLIENT_SUPERBUILD "Enable superbuild compilation." ON)
++option(UCLIENT_SUPERBUILD "Enable superbuild compilation." OFF)
+ option(UCLIENT_BUILD_TESTS "Build tests" OFF)
+-option(UCLIENT_BUILD_EXAMPLES "Build examples" OFF)
++option(UCLIENT_BUILD_EXAMPLES "Build examples" ON)
+ option(UCLIENT_VERBOSE_SERIALIZATION "Build with serialization verbosity" OFF)
+ option(UCLIENT_VERBOSE_MESSAGE "Build with message verbosity" OFF)
+ option(BUILD_SHARED_LIBS "Control shared/static library building." OFF)
+@@ -257,11 +257,7 @@ endif()
+ # Examples
+ ###############################################################################
+ if(UCLIENT_BUILD_EXAMPLES)
+-    add_subdirectory(examples/PublishHelloWorld)
+-    add_subdirectory(examples/SubscribeHelloWorld)
+-    add_subdirectory(examples/ShapesDemo)
+-    add_subdirectory(examples/Deployment)
+-    add_subdirectory(examples/Discovery)
++    add_subdirectory(examples/tb3_sbc_settings/turtlebot3_lidar)
+ endif()
+ 
+ ###############################################################################
