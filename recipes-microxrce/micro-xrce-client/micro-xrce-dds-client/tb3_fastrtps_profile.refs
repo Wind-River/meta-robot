@@ -1,0 +1,182 @@
+<profiles>
+    <participant profile_name="ros2_xrcedds_participant">
+        <rtps>
+            <name>ros2_xrcedds_participant</name>
+            <builtin>
+                <domainId>0</domainId>
+            </builtin>
+        </rtps>
+    </participant>
+
+
+    <data_writer profile_name="sensor_state">
+        <topic>
+            <kind>NO_KEY</kind>
+            <name>rt/sensor_state</name>
+            <dataType>turtlebot3_msgs::msg::dds_::SensorState_</dataType>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>10</depth>
+            </historyQos>
+        </topic>
+    </data_writer>
+
+    <data_writer profile_name="imu">
+        <topic>
+            <kind>NO_KEY</kind>
+            <name>rt/imu</name>
+            <dataType>sensor_msgs::msg::dds_::Imu_</dataType>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>10</depth>
+            </historyQos>
+        </topic>
+    </data_writer>
+
+    <data_writer profile_name="scan">
+        <topic>
+            <kind>NO_KEY</kind>
+            <name>rt/scan</name>
+            <dataType>sensor_msgs::msg::dds_::LaserScan_</dataType>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>10</depth>
+            </historyQos>
+        </topic>
+        <historyMemoryPolicy>PREALLOCATED_WITH_REALLOC</historyMemoryPolicy>
+    </data_writer>
+
+    <data_writer profile_name="version_info">
+        <topic>
+            <kind>NO_KEY</kind>
+            <name>rt/version_info</name>
+            <dataType>turtlebot3_msgs::msg::dds_::VersionInfo_</dataType>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>10</depth>
+            </historyQos>
+        </topic>
+    </data_writer>
+
+
+    <data_reader profile_name="cmd_vel">
+        <topic>
+            <name>rt/cmd_vel</name>
+            <dataType>geometry_msgs::msg::dds_::Twist_</dataType>
+        </topic>
+    </data_reader>
+
+    <data_reader profile_name="motor_power">
+        <topic>
+            <name>rt/motor_power</name>
+            <dataType>std_msgs::msg::dds_::Bool_</dataType>
+        </topic>
+    </data_reader>
+
+    <data_reader profile_name="reset">
+        <topic>
+            <name>rt/reset</name>
+            <dataType>std_msgs::msg::dds_::Empty_</dataType>
+        </topic>
+    </data_reader>
+
+    <data_reader profile_name="sound">
+        <topic>
+            <name>rt/sound</name>
+            <dataType>builtin_interfaces::msg::dds_::Sound_</dataType>
+        </topic>
+    </data_reader>
+
+    <data_reader profile_name="time_sync">
+        <topic>
+            <name>rt/time_sync</name>
+            <dataType>builtin_interfaces::msg::dds_::Time_</dataType>
+        </topic>
+    </data_reader>
+
+
+    <topic profile_name="Imu">
+        <kind>NO_KEY</kind>
+        <name>Imu</name>
+        <dataType>sensor_msgs::msg::dds_::Imu_</dataType>
+    </topic>
+
+    <topic profile_name="LaserScan">
+        <kind>NO_KEY</kind>
+        <name>LaserScan</name>
+        <dataType>sensor_msgs::msg::dds_::LaserScan_</dataType>
+    </topic>
+
+    <topic profile_name="Twist">
+        <kind>NO_KEY</kind>
+        <name>Twist</name>
+        <dataType>geometry_msgs::msg::dds_::Twist_</dataType>
+    </topic>
+
+    <topic profile_name="SensorState">
+        <kind>NO_KEY</kind>
+        <name>SensorState</name>
+        <dataType>turtlebot3_msgs::msg::dds_::SensorState_</dataType>
+    </topic>
+
+    <topic profile_name="Bool">
+        <kind>NO_KEY</kind>
+        <name>Bool</name>
+        <dataType>std_msgs::msg::dds_::Bool_</dataType>
+    </topic>
+
+    <topic profile_name="Empty">
+        <kind>NO_KEY</kind>
+        <name>Empty</name>
+        <dataType>std_msgs::msg::dds_::Empty_</dataType>
+    </topic>
+
+    <topic profile_name="Time">
+        <kind>NO_KEY</kind>
+        <name>Time</name>
+        <dataType>builtin_interfaces::msg::dds_::Time_</dataType>
+    </topic>
+
+    <topic profile_name="VersionInfo">
+        <kind>NO_KEY</kind>
+        <name>VersionInfo</name>
+        <dataType>turtlebot3_msgs::msg::dds_::VersionInfo_</dataType>
+    </topic>
+
+    <topic profile_name="Sound">
+        <kind>NO_KEY</kind>
+        <name>Sound</name>
+        <dataType>turtlebot3_msgs::msg::dds_::Sound_</dataType>
+    </topic>
+
+
+
+
+    <participant profile_name="template_participant">
+        <rtps>
+            <name>template_participant</name>
+        </rtps>
+    </participant>
+
+    <data_writer profile_name="template_writer">
+        <topic>
+            <kind>WITH_KEY</kind>
+            <name>topic_name</name>
+            <dataType>topic_type</dataType>
+        </topic>
+    </data_writer>
+
+    <data_reader profile_name="template_reader">
+        <topic>
+            <kind>WITH_KEY</kind>
+            <name>topic_name</name>
+            <dataType>topic_type</dataType>
+        </topic>
+    </data_reader>
+
+    <topic profile_name="template_topic">
+        <kind>WITH_KEY</kind>
+        <name>topic_name</name>
+        <dataType>topic_type</dataType>
+    </topic>
+</profiles>

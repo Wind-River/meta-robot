@@ -1,8 +1,6 @@
-diff --git a/home/bengelma/Downloads/Client-Diff/client.config b/home/bengelma/Downloads/Client-Diff/client1.config
-index 08ce23a..0d74ec1 100644
---- a/client.config
-+++ b/client.config
-@@ -14,6 +14,6 @@ CONFIG_MIN_HEARTBEAT_TIME_INTERVAL=1
+--- Micro-XRCE-DDS-Client-1.1.1/client.config
++++ Micro-XRCE-DDS-Client-1.1.1/client.config
+@@ -14,6 +14,6 @@
  
  CONFIG_BIG_ENDIANNESS=FALSE
  
