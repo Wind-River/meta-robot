@@ -11,12 +11,12 @@ RDEPENDS_${PN} += " glibc bash "
 SRCREV = "${AUTOREV}"
 #PV = "1.1+gitr${SRCPV}"
 
-SRC_URI = "https://github.com/ROBOTIS-GIT/turtlebot3/raw/ros2/turtlebot3_sbc_settings/${ROS_DISTRO}/tb3_sbc_settings.tar.bz2;name=${ROS_DISTRO}opencr \
+SRC_URI = " \
+  https://github.com/ROBOTIS-GIT/OpenCR-Binaries/raw/master/turtlebot3/ROS2/0.0.3/opencr_update.tar.bz2;name=opencr \
   https://raw.githubusercontent.com/ROBOTIS-GIT/turtlebot3/master/turtlebot3_bringup/99-turtlebot3-cdc.rules;name=t3rules \
   https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/99-opencr-cdc.rules;name=opencrrules \
   "
-SRC_URI[dashingopencr.md5sum] = "26304f9ba0e5a71609cb0d33ac2d6ec4"
-SRC_URI[crystalopencr.md5sum] = "f3ca4860630c38a7aa970ee18c2b50e0"
+SRC_URI[opencr.md5sum] = "76d9bb7c21be9b9a4523d5a24653355e"
 SRC_URI[t3rules.md5sum] = "8de86ae7ba79a893cb5ce841c3eadd2d"
 SRC_URI[opencrrules.md5sum] = "8de86ae7ba79a893cb5ce841c3eadd2d"
 
@@ -26,7 +26,6 @@ do_install(){
   echo "baselib is ${BASE_LIB}"
   install -d ${D}${base_prefix}/etc/udev/rules.d
   install -d ${D}${base_prefix}
-  cp -r ${WORKDIR}/tb3_sbc_settings/opencr_update ${D}${base_prefix}/opencr_update          
   install -m 0755 ${WORKDIR}/99-turtlebot3-cdc.rules ${D}${base_prefix}/etc/udev/rules.d/
   install -m 0755 ${WORKDIR}/99-opencr-cdc.rules ${D}${base_prefix}/etc/udev/rules.d/
 }
